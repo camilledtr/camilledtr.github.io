@@ -169,13 +169,12 @@ input.primary-btn:hover {
 /* ================ NAVBAR =================================================================== */
 
 navbar {
+    font-size: 2rem;
+    color: var(--dark-primary);
     display: flex;
     justify-content: space-between;
     height: var(--nav-height);
     width: 100%;
-    background-color: var(--background-color);
-    /* box-shadow: 0 1px 20px 1px var(--dark-primary-opacity); */
-    box-shadow: none;
     position: fixed;
     z-index: 100;
     animation: translate-down 0.75s cubic-bezier(0.2, 0, 0, 1) forwards;
@@ -228,7 +227,6 @@ navbar ul {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: var(--primary);
 }
 
 .hover-underline-animation::after {
@@ -239,7 +237,7 @@ navbar ul {
     height: 0.2rem;
     bottom: 0;
     left: 0;
-    background-color: var(--primary);
+    background-color: var(--dark-primary);
     transform-origin: right;
     transition: transform 0.25s ease-out;
 }
@@ -298,16 +296,72 @@ div.my-cv.primary-btn {
 .nav-menu {
     z-index: 50;
     width: 100%;
-    height: calc(100vh - var(--nav-height));
+    height: 100vh;
     background: linear-gradient(90deg, var(--dark-primary) 0%, var(--light-primary) 100%);
     position: fixed;
-    transition: 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transform: translateY(-100vh);
+    text-align: center;
 }
 
 .js-nav-open {
     transform: translateY(0);
-    min-height: 100vh;
+}
+
+.nav-menu-list {
+    margin-top: calc(50vh - 4*12rem/2);
+}
+
+.nav-menu-list a {
+    opacity: 0;
+    font-size: 7rem;
+    line-height: 12rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.js-nav-open .nav-menu-list a {
+    animation: textAppear 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
+}
+
+@keyframes textAppear {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: 0.2em;
+        opacity: 1;
+    }
+}
+
+.hover-line-through-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-line-through-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.6rem;
+    bottom: 6rem;
+    right: 0.7rem;
+    background-color: white;
+    transform-origin: right;
+    transition: transform 0.2s ease-out;
+}
+
+.hover-line-through-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.6s ease-out;
 }
 
 
@@ -350,7 +404,7 @@ div.my-cv.primary-btn {
 
 .home img {
     max-width: 500px;
-    animation: translate-up .75s cubic-bezier(0.2, 0, 0, 1) forwards;
+    animation: translate-up-name .75s cubic-bezier(0.2, 0, 0, 1) forwards;
     overflow: hidden;
     visibility: hidden;
 }
@@ -363,7 +417,7 @@ div.my-cv.primary-btn {
     animation-delay: 1s;
 }
 
-@keyframes translate-up {
+@keyframes translate-up-name {
     0% {
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
         transform: translateY(200%);
@@ -403,33 +457,45 @@ div.my-cv.primary-btn {
 }
 
 .to-portfolio span {
-    font-size: 3rem;
-    font-weight: 300;
-    margin-top: 4px;
+    font-size: 4rem;
+    font-weight: 200;
+    margin-top: -3rem;
+    animation: arrowsOpacity 2s ease-in-out infinite;
 }
 
-.to-portfolio span:hover {
-    animation: bounce 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) infinite alternate both;
+.to-portfolio span:nth-of-type(2) {
+    animation-delay: 0.5s;
 }
 
+.to-portfolio span:nth-of-type(3) {
+    animation-delay: 1s;
+}
 
-@keyframes bounce {
+.to-portfolio .arrows {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.3rem;
+}
+
+@keyframes arrowsOpacity {
     0% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
     }
 
     100% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px);
+        opacity: 0;
     }
 }
 
-.to-portfolio a {
-    text-decoration: none;
-    color: var(--primary);
-}
-
+;
 
 /* ================ PROJECTS ================================================================= */
 
@@ -658,6 +724,15 @@ footer img {
         display: none;
     }
 
+    .nav-menu-list a {
+        font-size: 10vw;
+        line-height: 10rem;
+    }
+
+    .nav-menu-list {
+        margin-top: calc(50vh - 4*10rem/2);
+    }
+
     .about-container {
         flex-direction: column-reverse;
         gap: 6rem;
@@ -710,6 +785,7 @@ footer img {
 
 
 /*TODO: 
+section home: replace the single arrow with three animated by changing their opacity
 reduce top margin for section titles by changing the place where the user is sent to when we click on the link in the navbar
 zoom out home background for phones to see the text,
 manage the navbar z-indexes and create nav menu content,

@@ -5,14 +5,14 @@
     font-size: 62.5%;
     --very-light-primary: #d0b9ea;
     --light-primary: #a789c9;
-    --dark-primary: #4c3862;
-    --dark-primary-opacity: #4c386264;
-    --primary: #654b82;
+    --primary: #554a8e;
+    --primary-opacity: #4c386264;
+    --primary: #554a8e;
     --secondary: #654b82cf;
     --background-color: #e9e9ef;
     --light-background-color: #e9e9ef6b;
     --nav-height: 6rem;
-    --section-padding-top: calc(var(--nav-height) + 1rem);
+    --section-padding-top: calc(var(--nav-height) + 0.5rem);
 }
 
 
@@ -55,7 +55,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--dark-primary);
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -63,7 +63,7 @@ h2.section-title {
     font-size: 5rem;
     font-family: 'Stardom', sans-serif;
     margin-left: 5%;
-    color: var(--dark-primary);
+    color: var(--primary);
     padding-top: var(--section-padding-top);
     padding-bottom: 2rem;
 }
@@ -71,15 +71,15 @@ h2.section-title {
 div.primary-btn,
 input.primary-btn {
     background-color: transparent;
-    color: var(--dark-primary);
+    color: var(--primary);
     border-radius: 3rem;
-    border: var(--dark-primary) 2px solid;
+    border: var(--primary) 2px solid;
     padding: 0.8rem 2rem;
 }
 
 div.primary-btn:hover,
 input.primary-btn:hover {
-    background-color: var(--dark-primary);
+    background-color: var(--primary);
     -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.9s both;
     cursor: pointer;
@@ -169,8 +169,8 @@ input.primary-btn:hover {
 /* ================ NAVBAR =================================================================== */
 
 navbar {
-    font-size: 2rem;
-    color: var(--dark-primary);
+    font-size: 2.5rem;
+    color: var(--primary);
     display: flex;
     justify-content: space-between;
     height: var(--nav-height);
@@ -237,7 +237,7 @@ navbar ul {
     height: 0.2rem;
     bottom: 0;
     left: 0;
-    background-color: var(--dark-primary);
+    background-color: var(--primary);
     transform-origin: right;
     transition: transform 0.25s ease-out;
 }
@@ -248,11 +248,11 @@ navbar ul {
 }
 
 .my-cv span {
-    width: 2rem;
+    width: 3rem;
     position: absolute;
     /*move the icon*/
-    margin-left: -2.5rem;
-    margin-top: -0.1rem;
+    margin-left: -2.8rem;
+    margin-top: 0.4rem;
 }
 
 div.my-cv.primary-btn {
@@ -270,7 +270,7 @@ div.my-cv.primary-btn {
     content: "";
     width: 3rem;
     height: 3px;
-    background-color: var(--dark-primary);
+    background-color: var(--primary);
     transform-origin: center left;
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -297,7 +297,7 @@ div.my-cv.primary-btn {
     z-index: 50;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, var(--dark-primary) 0%, var(--light-primary) 100%);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--light-primary) 100%);
     position: fixed;
     transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transform: translateY(-100vh);
@@ -380,9 +380,10 @@ div.my-cv.primary-btn {
 
 .socials {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 2.7rem;
-    gap: 0.5rem;
+    flex-direction: column;
+    position: fixed;
+    right: 1rem;
+    z-index: 1;
 }
 
 .home .socials {
@@ -390,9 +391,14 @@ div.my-cv.primary-btn {
     animation: fade 2s 2.75s forwards;
 }
 
-.socials span {
-    font-size: 1.5rem;
-    margin: 0 10px;
+.socials i {
+    font-size: 2.5rem;
+    margin: 10px 10px;
+}
+
+.socials i:hover {
+    filter: drop-shadow(0px 0px 12px #554a8e);
+    transition: filter 0.1s ease-in-out;
 }
 
 .home .name {
@@ -411,6 +417,7 @@ div.my-cv.primary-btn {
 
 .home img:nth-child(1) {
     animation-delay: 0.8s;
+    max-width: 200px;
 }
 
 .home img:nth-child(2) {
@@ -433,7 +440,7 @@ div.my-cv.primary-btn {
 .home-text {
     opacity: 0;
     margin-left: 5%;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     animation: fade 2s 1.5s forwards;
 }
 
@@ -505,44 +512,47 @@ div.my-cv.primary-btn {
     padding-bottom: 200px;
     position: relative;
     overflow: hidden;
-    background-color: var(--light-primary);
     background: fixed;
 }
 
-.projects-great-container .background {
+/* .projects-great-container .background {
     z-index: -1;
     margin-top: -20px;
     width: 50vw;
     height: 60vh;
     border-radius: 0% 100% 30% 70% / 0% 33% 67% 100%;
     background-color: var(--very-light-primary);
-}
+} */
 
 .projects .projects-container {
     margin-top: 30px;
-    font-size: 1.5rem;
-    color: var(--dark-primary);
+    font-size: 2.5rem;
+    color: var(--primary);
 }
 
 .projects .project {
     display: flex;
     justify-content: space-around;
     height: 90vh;
+    padding-left: 5vw;
 }
 
 .project img {
-    padding-left: 5vw;
-    max-width: 50vw;
-    max-height: 60vh;
+    max-width: 40vw;
+    max-height: 50vh;
+}
+
+.project img.smartphone {
+    max-width: 20vw;
+    max-height: 50vh;
 }
 
 .project-text {
-    margin-left: 10vw;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
     width: 40vw;
-    height: 60vh;
+    height: fit-content;
     gap: 2vh;
 }
 
@@ -556,7 +566,7 @@ div.my-cv.primary-btn {
 }
 
 .project-text div.primary-btn {
-    width: 6rem;
+    width: 10rem;
     text-align: center;
 }
 
@@ -581,12 +591,17 @@ div.my-cv.primary-btn {
 
 
 .about-text {
-    width: 50vw;
+    width: 60vw;
     margin-left: 5%;
     align-self: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.about-text p {
+    margin-top: 2rem;
+    font-size: 2rem;
 }
 
 
@@ -616,7 +631,7 @@ form {
 
 label {
     display: block;
-    color: var(--dark-primary);
+    color: var(--primary);
     font-weight: bold;
     margin-bottom: -2.5rem;
 }
@@ -632,6 +647,7 @@ label {
     border: none;
     border-radius: 4px;
     font-family: 'Crimson Text', serif;
+    transition: border 0.2s ease-in-out;
 }
 
 textarea.form-input {
@@ -641,14 +657,14 @@ textarea.form-input {
 
 .form-input:focus {
     outline: none;
-    border: 5px solid var(--very-light-primary);
+    border: 4px solid var(--very-light-primary);
 }
 
 input[type=submit] {
     display: block;
     margin: 1rem auto 0;
     font-family: 'Crimson Text', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -670,7 +686,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 200px;
-    background-color: var(--dark-primary);
+    background-color: var(--primary);
     clip-path: polygon(0 50%, 100% 20%, 100% 100%, 0% 100%);
 }
 
@@ -686,12 +702,28 @@ footer img {
     margin-bottom: 40px;
 }
 
+.go-to-top {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20vh;
+}
+
+.go-to-top span {
+    font-size: 7rem;
+    color: var(--background-color);
+    margin-bottom: 5vh;
+}
+
 /* ================ MEDIA QUERIES ============================================================= */
 
 /* TABLETS */
 @media screen and (max-width: 1200px) {
     .projects .project {
         flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 10vh;
     }
 
     .project {
@@ -699,10 +731,9 @@ footer img {
     }
 
     .project .project-text {
-        margin-left: 5%;
         text-align: center;
-        justify-content: center;
         align-items: center;
+        margin-top: 2vh;
     }
 
     navbar ul {
@@ -714,6 +745,10 @@ footer img {
 @media screen and (max-width: 900px) {
     .home {
         background-size: calc(50rem + 50%);
+    }
+
+    .home-text {
+        font-size: 2rem;
     }
 
     navbar ul {

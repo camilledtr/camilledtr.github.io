@@ -101,7 +101,7 @@
                             <h3>Knowledge Transfer</h3>
                             <p>Mobile application for East-West Seed</p>
                             <div class="techno">
-                                <p>JavaScript - React Native</p>
+                                <p>TypeScript - React Native</p>
                                 <p>PHP - Laravel</p>
                                 <p>PostgreSQL - pgAdmin</p>
                             </div>

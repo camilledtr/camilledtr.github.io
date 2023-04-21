@@ -93,9 +93,9 @@
                 <div class="projects-container">
                     <div class="project reveal">
                         <div class="img-container">
-                            <img src="/assets/projects/ktapp-home.jpg" alt="project 1 - Home page" class="smartphone">
-                            <img src="/assets/projects/ktapp-nav.jpg" alt="project 1 - Navigation menu" class="smartphone">
-                            <img src="/assets/projects/ktapp-farmers.jpg" alt="project 1 - Farmer page" class="smartphone">
+                            <img src="/assets/projects/ktapp-home.png" alt="project 1 - Home page" class="smartphone">
+                            <img src="/assets/projects/ktapp-nav.png" alt="project 1 - Navigation menu" class="smartphone">
+                            <img src="/assets/projects/ktapp-farmers.png" alt="project 1 - Farmer page" class="smartphone">
                         </div>
                         <div class="project-text">
                             <h3>Knowledge Transfer</h3>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                     <div class="project reveal">
-                        <img src="/assets/projects/cocktail-home.jpg" alt="project 2">
+                        <img src="/assets/projects/cocktail-home.png" alt="project 2">
                         <div class="project-text">
                             <h3>Cocktail</h3>
                             <p>Website to manage enrollment to courses</p>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="project reveal">
-                        <img src="/assets/projects/portfolio-laptop-smartphone.jpg" alt="project 3">
+                        <img src="/assets/projects/portfolio-laptop-smartphone.png" alt="project 3">
                         <div class="project-text">
                             <h3>My portfolio</h3>
                             <p>Share my journey</p>

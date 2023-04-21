@@ -371,7 +371,7 @@ div.my-cv.primary-btn {
     min-height: calc(100vh - var(--nav-height));
     width: 100%;
     background-color: var(--background-color);
-    background-image: url(/backgrounds/back-flower.png);
+    background-image: url(/backgrounds/back-flower.jpg);
     background-repeat: no-repeat;
     background-size: auto calc(100% - var(--nav-height));
     background-position: right bottom;
@@ -819,13 +819,13 @@ footer img {
 
 
 
-/*TODO: 
+/*TODO:
 add resume and social links to the navmenu
 reduce top margin for section titles by changing the place where the user is sent to when we click on the link in the navbar
 OK to check: zoom out home background for phones to see the text
 change the background for projects section (manage the svg element),
 OK to check: phone responsive,
-projects section: review flex column/row according to the ratio screen 
-contact form to send for real, 
+projects section: review flex column/row according to the ratio screen
+contact form to send for real,
 put a pop up button in the contact section that show off my email
 customize the loading screen*/

@@ -16,7 +16,7 @@ if (isset($_POST['message'])) {
     if ($result) {
         echo '<p class="form-status">Mail successfully sent!</p>';
     } else {
-        echo '<p class="form-status">Something went wrong. Please try again or contact the administrator.</p>';
+        echo '<p class="form-status">Something went wrong. Please try again or contact the administrator: <a href="mailto:camilledr10@gmail.com" target="_blank">Send email</a></p>';
     }
 }
 ?>

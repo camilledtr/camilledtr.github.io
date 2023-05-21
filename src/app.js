@@ -1,12 +1,25 @@
+const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark-primary');
+
+// Fill svg icons with the right color =================================================================================
+window.onload = function () {
+    // Get all svg icons
+    const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
+    const footerLogo = document.querySelector('#footer-logo').contentDocument.querySelector('svg').querySelector('path');
+
+    // Fill svg icons with the right color
+    navLogo.setAttribute('fill', darkPrimaryColor);
+    footerLogo.setAttribute('fill', "white");
+}
+
 
 // Reveal text of sections when scroll =================================================================================
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll(".reveal");
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
@@ -20,14 +33,14 @@ window.addEventListener("scroll", reveal);
 
 
 // Hide navbar on scroll down, display on scroll up ====================================================================
-var lastScrollTop; // This Varibale will store the top position
+let lastScrollTop; // This Varibale will store the top position
 
-var navbar = document.getElementById('navbar'); // Get The NavBar
+const navbar = document.getElementById('navbar'); // Get The NavBar
 
 window.addEventListener('scroll', function () {
     // If the nav menu is open, we don't want the navbar to hide
     if (!document.querySelector('.nav-menu').classList.contains('js-nav-open')) {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         //This line will get the location on scroll
 
         if (scrollTop > lastScrollTop) { //if it is greater than the previous
@@ -44,41 +57,17 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Fix the background in the projects section ==========================================================================
-jQuery(document).ready(function ($) {
-
-    var offset = $('.sticker').offset();
-    var fromtop = offset.top;
-    var bottom = $('.sticker').parent().offset().top + $('.sticker').parent().height();
-
-    $(document).scroll(function () {
-        dist = $(this).scrollTop();
-
-        if (dist >= fromtop && dist <= bottom) {
-            $('.sticker:last').show();
-            $('.sticker:first').css({
-                'position': 'fixed',
-                'top': '0px'
-            });
-        } else {
-            $('.sticker').css({
-                'position': 'absolute'
-            });
-        }
-    });
-});
 
 // Open and close the nav menu ===================================================================================================
-var menuBtn = document.querySelector('.menu-btn');
-var BtnBar1 = document.querySelector('.menu-btn__bar-1');
-var BtnBar2 = document.querySelector('.menu-btn__bar-2');
-var logo = document.querySelector('#logo');
-var navCategories = document.querySelectorAll('navbar ul li');
-var darkColorPrimary = document.querySelector(':root').style.getPropertyValue('--dark-color-primary');
-var navMenuCategories = document.querySelectorAll('.nav-menu ul li');
+const menuBtn = document.querySelector('.menu-btn');
+const BtnBar1 = document.querySelector('.menu-btn__bar-1');
+const BtnBar2 = document.querySelector('.menu-btn__bar-2');
+const navCategories = document.querySelectorAll('#navbar ul li');
+const navMenuCategories = document.querySelectorAll('.nav-menu ul li');
 
 menuBtn.addEventListener('click', e => {
-    var viewportWidth = window.innerWidth;
+    const viewportWidth = window.innerWidth;
+    const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
     menuBtn.classList.toggle('js-btn-open');
     document.querySelector('.nav-menu').classList.toggle('js-nav-open');
 
@@ -86,7 +75,7 @@ menuBtn.addEventListener('click', e => {
         BtnBar1.style.backgroundColor = "white";
         BtnBar2.style.backgroundColor = "white";
         setTimeout(() => {
-            logo.src = "/assets/crop-light-logo.png";
+            navLogo.setAttribute('fill', "white");
             document.querySelector('a.logo').removeAttribute("href");
             menuBtn.style.position = "fixed";
             menuBtn.style.right = "3rem";
@@ -97,12 +86,12 @@ menuBtn.addEventListener('click', e => {
             }
         }, 150);
     } else {
-        BtnBar1.style.backgroundColor = darkColorPrimary;
-        BtnBar2.style.backgroundColor = darkColorPrimary;
+        BtnBar1.style.backgroundColor = darkPrimaryColor;
+        BtnBar2.style.backgroundColor = darkPrimaryColor;
         setTimeout(() => {
             menuBtn.style.position = "static";
             menuBtn.style.right = "auto";
-            logo.src = "/assets/crop-logo.png";
+            navLogo.setAttribute('fill', darkPrimaryColor);
             document.querySelector('a.logo').setAttribute("href", "#home");
             if (viewportWidth > 900) {
                 for (let navCategory of navCategories) {
@@ -113,18 +102,18 @@ menuBtn.addEventListener('click', e => {
     }
 });
 
-// Close the nav menu if the user clicks on a nav menu category 
+// Close the nav menu if the user clicks on a nav menu category
 for (let navMenuCategory of navMenuCategories) {
     navMenuCategory.addEventListener('click', e => {
-        var viewportWidth = window.innerWidth;
+        const viewportWidth = window.innerWidth;
         menuBtn.classList.toggle('js-btn-open');
         document.querySelector('.nav-menu').classList.toggle('js-nav-open');
-        BtnBar1.style.backgroundColor = darkColorPrimary;
-        BtnBar2.style.backgroundColor = darkColorPrimary;
+        BtnBar1.style.backgroundColor = darkPrimaryColor;
+        BtnBar2.style.backgroundColor = darkPrimaryColor;
         setTimeout(() => {
             menuBtn.style.position = "static";
             menuBtn.style.right = "auto";
-            logo.src = "/assets/crop-logo.png";
+            navLogo.setAttribute('fill', "white");
             if (viewportWidth > 900) {
                 for (let navCategory of navCategories) {
                     navCategory.style.display = "block";

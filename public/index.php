@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camille Durthaller-Renard - My portfolio</title>
-    <link rel="icon" href="public/assets/crop-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/crop-logo.svg" type="image/svg+xml">
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Font Awesome for icons -->
@@ -21,14 +21,14 @@
 <body>
     <nav id="navbar">
         <!-- <a class="logo" href="#home"><img src="/assets/crop-logo.png" alt="logo" id="logo"></a> -->
-        <a class="logo" href="#home"><object id="nav-logo" data="/public/assets/logo.svg" type="image/svg+xml"></object></a>
+        <a class="logo" href="#home"><object id="nav-logo" data="/assets/logo.svg" type="image/svg+xml"></object></a>
 
         <ul>
             <li><a href="#projects" class="hover-underline-animation">Projects</a></li>
             <li><a href="#about" class="hover-underline-animation">About</a></li>
             <li><a href="#contact" class="hover-underline-animation">Contact</a></li>
             <li>
-                <div class="my-cv primary-btn"><a class="my-cv" href="public/assets/01_DURTHALLER-RENARD_resume.pdf" download><span class="material-symbols-outlined">
+                <div class="my-cv primary-btn"><a class="my-cv" href="assets/01_DURTHALLER-RENARD_resume.pdf" download><span class="material-symbols-outlined">
                             download
                         </span>My CV</a>
                 </div>
@@ -92,9 +92,9 @@
             <div class="projects-container">
                 <div class="project reveal">
                     <div class="img-container">
-                        <img src="public/assets/projects/ktapp-home.png" alt="project 1 - Home page" class="smartphone">
-                        <img src="public/assets/projects/ktapp-nav.png" alt="project 1 - Navigation menu" class="smartphone">
-                        <img src="public/assets/projects/ktapp-farmers.png" alt="project 1 - Farmer page" class="smartphone">
+                        <img src="assets/projects/ktapp-home.png" alt="project 1 - Home page" class="smartphone">
+                        <img src="assets/projects/ktapp-nav.png" alt="project 1 - Navigation menu" class="smartphone">
+                        <img src="assets/projects/ktapp-farmers.png" alt="project 1 - Farmer page" class="smartphone">
                     </div>
                     <div class="project-text">
                         <h3>Knowledge Transfer</h3>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="project reveal">
-                    <img src="public/assets/projects/cocktail-home.png" alt="project 2">
+                    <img src="assets/projects/cocktail-home.png" alt="project 2">
                     <div class="project-text">
                         <h3>Cocktail</h3>
                         <p>Website to manage enrollment to courses</p>
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="project reveal">
-                    <img src="public/assets/projects/portfolio-laptop-smartphone.png" alt="project 3">
+                    <img src="assets/projects/portfolio-laptop-smartphone.png" alt="project 3">
                     <div class="project-text">
                         <h3>My portfolio</h3>
                         <p>Share my journey</p>
@@ -152,7 +152,7 @@
                 </div>
 
                 <div class="about-img reveal">
-                    <img src="public/assets/camille.png" alt="camille">
+                    <img src="assets/camille.png" alt="camille">
                 </div>
             </div>
         </section>
@@ -178,7 +178,7 @@
         <footer>
             <div class="info">
                 <p>©2022 - 2023 &nbsp; Made by CC</p>
-                <object id="footer-logo" data="public/assets/logo.svg" type="image/svg+xml"></object>
+                <object id="footer-logo" data="assets/logo.svg" type="image/svg+xml"></object>
             </div>
             <div class="go-to-top">
                 <a href="#home">

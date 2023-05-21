@@ -499,6 +499,7 @@ div.my-cv.primary-btn {
 .home-text {
     opacity: 0;
     margin-left: 5%;
+    padding-right: 10%;
     font-size: 2.5rem;
     animation: fade 2s 1.5s forwards;
     display: flex;
@@ -723,7 +724,7 @@ div.my-cv.primary-btn {
 
 form {
     max-width: 500px;
-    padding: 0 20px 100px 0;
+    padding: 0 20px 100px 20px;
     min-height: calc(100vh - 10rem - 100px);
     margin: 0 auto;
     text-align: left;
@@ -861,6 +862,15 @@ footer p {
         font-size: 7rem;
     }
 
+    .home .to-portfolio {
+        margin-bottom: 8rem;
+    }
+
+    .project-text {
+        width: 65vw;
+        font-size: 2rem;
+    }
+
     .about-container {
         flex-direction: column-reverse;
         gap: 6rem;
@@ -868,6 +878,21 @@ footer p {
 
     .about-text {
         width: 70vw;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    footer .info {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5rem;
+        margin-top: 50px;
+    }
+
+    #footer-logo {
+        margin-left: 12px;
     }
 }
 
@@ -934,16 +959,12 @@ footer p {
         gap: 4rem;
     }
 
+    .about img {
+        width: 50vw;
+    }
+
     .about-text {
         width: 80vw;
-    }
-
-    footer p {
-        font-size: 1.5rem;
-    }
-
-    footer img {
-        width: 100px;
     }
 }
 

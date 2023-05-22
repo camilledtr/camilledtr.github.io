@@ -9,6 +9,7 @@
     --medium-primary: #7C76B7;
     --secondary: #88D3C9;
     --light-secondary: #CFEDE9;
+    --medium-secondary: #64c6b4;
     --dark-secondary: #1F826E;
     --tertiary: #E6A1B7;
     --dark-tertiary: #9A4661;
@@ -97,9 +98,10 @@ input.primary-btn:hover {
 
 div.secondary-btn {
     background-color: transparent;
-    color: var(--dark-secondary);
+    color: white;
     border-radius: var(--border-radius);
-    border: var(--dark-secondary) 2px solid;
+    border: var(--medium-secondary) 2px solid;
+    background-color: var(--medium-secondary);
     padding: 0.8rem 2rem;
     overflow: hidden;
     position: relative;
@@ -522,7 +524,7 @@ div.my-cv.primary-btn {
     margin-top: 70px;
     padding: 1.5rem 3rem;
     animation: fade 5s 1.5s forwards;
-    background-color: #88D3C9;
+    background-color: var(--medium-secondary);
     width: fit-content;
     border-radius: var(--border-radius);
     display: flex;
@@ -532,23 +534,32 @@ div.my-cv.primary-btn {
 }
 
 .to-portfolio p {
-    color: black;
+    color: white;
+    font-weight: 800;
+    padding-right: 4rem;
 }
 
 .to-portfolio svg {
-    margin-left: 1rem;
-    width: 2rem;
-    transition: transform 0.2s ease-in-out;
+    width: 3rem;
+    top: 0.6rem;
+    right: 3rem;
+    animation: translate-arrow 0.7s infinite alternate ease-in-out;
+    position: absolute;
+}
+
+@keyframes translate-arrow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(12px);
+    }
 }
 
 .to-portfolio:hover {
     cursor: pointer;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.05)
-}
-
-.to-portfolio:hover svg {
-    transform: translateX(7px);
 }
 
 .to-portfolio::before {
@@ -563,7 +574,7 @@ div.my-cv.primary-btn {
     border-radius: var(--border-radius);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.4s ease-out;
     visibility: hidden;
 }
 
@@ -719,7 +730,11 @@ div.my-cv.primary-btn {
 
 #contact {
     width: 100%;
-    background-color: var(--light-tertiary);
+    background-color: var(--primary);
+}
+
+.contact.section-title {
+    color: white;
 }
 
 form {
@@ -733,7 +748,7 @@ form {
 
 label {
     display: block;
-    color: var(--dark-primary);
+    color: white;
     font-weight: bold;
     margin-bottom: -2.5rem;
 }
@@ -744,9 +759,10 @@ label {
     padding: 1rem 1rem;
     margin-bottom: 1rem;
     font-size: 1.8rem;
+    font-weight: 600;
     box-sizing: border-box;
-    background-color: var(--dark-primary);
-    color: white;
+    color: var(--dark-primary);
+    background-color: white;
     border: none;
     border-radius: 4px;
     font-family: 'Crimson Text', serif;
@@ -760,7 +776,7 @@ textarea.form-input {
 
 .form-input:focus {
     outline: none;
-    border: 3px solid white;
+    border: 3px solid var(--dark-primary);
 }
 
 input[type=submit] {
@@ -769,6 +785,16 @@ input[type=submit] {
     font-family: 'Crimson Text', serif;
     font-size: 2.5rem;
     font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 1.5rem 4rem;
+    border-radius: 4rem;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--dark-primary);
+    border-color: var(--dark-primary);
 }
 
 /* ================ FOOTER ==================================================================== */

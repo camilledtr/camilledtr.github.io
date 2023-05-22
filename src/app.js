@@ -8,7 +8,7 @@ window.onload = function () {
 
     // Fill svg icons with the right color
     navLogo.setAttribute('fill', darkPrimaryColor);
-    footerLogo.setAttribute('fill', "white");
+    footerLogo.setAttribute('fill', "#fff");
 }
 
 

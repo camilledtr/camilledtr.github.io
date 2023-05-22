@@ -13,6 +13,14 @@ window.onload = function () {
 
 
 // Reveal text of sections when scroll =================================================================================
+const viewportWidth = window.innerWidth;
+if (viewportWidth < 600) {
+    const reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+        reveals[i].classList.remove("reveal");
+    }
+}
+
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
 

@@ -420,11 +420,6 @@ div.my-cv.primary-btn {
     color: var(--dark-primary);
 }
 
-.socials object {
-    margin: 12px 10px;
-    pointer-events: none;
-}
-
 .socials a:hover {
     filter: drop-shadow(0px 0px 12px var(--dark-primary));
     transition: filter 0.1s ease-in-out;

@@ -158,7 +158,7 @@
 
         <section id="contact" class="contact">
             <h2 class="contact section-title reveal">Contact me</h2>
-            <form class="reveal" action="contact.php" method="post">
+            <form class="reveal" method="post">
                 <label for="name">Name :</label><br>
                 <input class="form-input" type="text" id="name" name="name" required><br>
                 <label for="email">Email :</label><br>

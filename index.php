@@ -158,7 +158,7 @@
 
         <section id="contact" class="contact">
             <h2 class="contact section-title reveal">Contact me</h2>
-            <form class="reveal" method="post">
+            <form class="reveal" action="#contact" method="post">
                 <label for="name">Name :</label><br>
                 <input class="form-input" type="text" id="name" name="name" required><br>
                 <label for="email">Email :</label><br>
@@ -186,7 +186,7 @@
                 }
                 ?>
                 <?php if (isset($statusMessage)) { ?>
-                    <p class="form-status"><?php echo $statusMessage; ?></p>
+                    <p id="form-status" style="text-align: center; color: var(--dark-secondary); margin-top: 1rem; font-size: 2rem; font-weight: 800;"><?php echo $statusMessage; ?></p>
                 <?php } ?>
             </form>
         </section>

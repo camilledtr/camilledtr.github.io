@@ -771,14 +771,6 @@ input[type=submit] {
     font-weight: bold;
 }
 
-.form-status {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--dark-tertiary);
-    margin-top: 1rem;
-    text-align: center;
-}
-
 /* ================ FOOTER ==================================================================== */
 
 footer {

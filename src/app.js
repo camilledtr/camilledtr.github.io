@@ -1,16 +1,3 @@
-const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark-primary');
-
-// Fill svg icons with the right color =================================================================================
-
-// Get all svg icons
-const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
-const footerLogo = document.querySelector('#footer-logo').contentDocument.querySelector('svg').querySelector('path');
-
-// Fill svg icons with the right color
-navLogo.setAttribute('fill', darkPrimaryColor);
-footerLogo.setAttribute('fill', "#fff");
-
-
 // Reveal text of sections when scroll =================================================================================
 const viewportWidth = window.innerWidth;
 
@@ -72,6 +59,7 @@ const BtnBar1 = document.querySelector('.menu-btn__bar-1');
 const BtnBar2 = document.querySelector('.menu-btn__bar-2');
 const navCategories = document.querySelectorAll('#navbar ul li');
 const navMenuCategories = document.querySelectorAll('.nav-menu ul li');
+const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark-primary');
 
 menuBtn.addEventListener('click', e => {
     const viewportWidth = window.innerWidth;

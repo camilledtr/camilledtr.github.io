@@ -540,11 +540,9 @@ div.my-cv.primary-btn {
 }
 
 .to-portfolio svg {
+    margin-left: 1rem;
     width: 3rem;
-    top: 0.6rem;
-    right: 3rem;
     animation: translate-arrow 0.7s infinite alternate ease-in-out;
-    position: absolute;
 }
 
 @keyframes translate-arrow {

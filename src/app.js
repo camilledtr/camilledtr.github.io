@@ -1,15 +1,14 @@
 const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark-primary');
 
 // Fill svg icons with the right color =================================================================================
-window.onload = function () {
-    // Get all svg icons
-    const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
-    const footerLogo = document.querySelector('#footer-logo').contentDocument.querySelector('svg').querySelector('path');
 
-    // Fill svg icons with the right color
-    navLogo.setAttribute('fill', darkPrimaryColor);
-    footerLogo.setAttribute('fill', "#fff");
-}
+// Get all svg icons
+const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
+const footerLogo = document.querySelector('#footer-logo').contentDocument.querySelector('svg').querySelector('path');
+
+// Fill svg icons with the right color
+navLogo.setAttribute('fill', darkPrimaryColor);
+footerLogo.setAttribute('fill', "#fff");
 
 
 // Reveal text of sections when scroll =================================================================================

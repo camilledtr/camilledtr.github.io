@@ -168,9 +168,9 @@
                 <label for="message">Message :</label><br>
                 <textarea class="form-input" id="message" name="message" required></textarea><br>
                 <input type="submit" class="primary-btn" value="Send">
-                <!-- <?php
+                <?php
                 include 'contact.php';
-                ?> -->
+                ?>
             </form>
         </section>
 

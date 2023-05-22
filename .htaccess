@@ -1,9 +1,5 @@
-AddType application/x-httpd-php .php
-AddType application/x-httpd-htm .html
-Order Allow
-Allow from all
-RewriteEngine On 
+RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.camilledurthallerrenard\.com [NC]
 RewriteRule ^(.*)$ http://camilledurthallerrenard.com/$1 [L,R=301]
-RewriteCond %{HTTPS} off 
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

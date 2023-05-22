@@ -169,8 +169,25 @@
                 <textarea class="form-input" id="message" name="message" required></textarea><br>
                 <input type="submit" class="primary-btn" value="Send">
                 <?php
-                include 'contact.php';
+                if (isset($_POST['message'])) {
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $subject = $_POST['subject'];
+                    $message = $_POST['message'];
+
+                    $mailTo = "camilledr10@gmail.com";
+                    $result = mail($mailTo, $subject, $message, 'From:' . $email);
+
+                    if ($result) {
+                        $statusMessage = 'Mail successfully sent!';
+                    } else {
+                        $statusMessage = 'Something went wrong. Please try again or contact the administrator: <a href="mailto:camilledr10@gmail.com" target="_blank">Send email</a>';
+                    }
+                }
                 ?>
+                <?php if (isset($statusMessage)) { ?>
+                    <p class="form-status"><?php echo $statusMessage; ?></p>
+                <?php } ?>
             </form>
         </section>
 

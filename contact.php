@@ -1,14 +1,9 @@
 <?php
 if (isset($_POST['message'])) {
-    // $name = $_POST['name'];
-    // $email = $_POST['email'];
-    // $subject = $_POST['subject'];
-    // $message = $_POST['message'];
-
-    $name = 'cam';
-    $email = 'camilledr10@gmail.com';
-    $subject = 'cc';
-    $message = 'cccc';
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
     $mailTo = "camilledr10@gmail.com";
     $result = mail($mailTo, $subject, $message, 'From:' . $email);

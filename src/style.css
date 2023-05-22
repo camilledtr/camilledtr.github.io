@@ -608,6 +608,14 @@ div.my-cv.primary-btn {
     font-size: 2.5rem;
     color: var(--dark-primary);
     padding: 5rem;
+    padding-bottom: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+}
+
+.projects .section-title {
+    margin-bottom: 50px;
 }
 
 .projects .project {
@@ -643,13 +651,16 @@ div.my-cv.primary-btn {
 
 .project-text h3 {
     font-size: 4rem;
+    font-family: 'Stardom', cursive;
     color: var(--medium-primary);
 }
 
-.project-text .techno {
+.project-text .stack {
+    margin-top: 2rem;
     display: flex;
-    gap: 30px;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .project-text div.secondary-btn {
@@ -659,8 +670,11 @@ div.my-cv.primary-btn {
     margin-top: 5rem;
 }
 
-.techno p {
+.stack p {
     text-align: center;
+    font-family: 'Consolas', monospace;
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-text .more {
@@ -671,8 +685,8 @@ div.my-cv.primary-btn {
 }
 
 .project-text .coming-soon {
-    font-size: 2rem;
-    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
     color: var(--tertiary);
 }
 
@@ -840,11 +854,12 @@ footer p {
 /* ================ MEDIA QUERIES ============================================================= */
 
 /* TABLETS */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .projects .project {
         flex-direction: column;
         padding-left: 0;
         margin-bottom: 10vh;
+        gap: 3rem;
     }
 
     .project {

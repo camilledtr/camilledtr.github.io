@@ -17,8 +17,10 @@ const viewportWidth = window.innerWidth;
 if (viewportWidth < 600) {
     const reveals = document.querySelectorAll(".reveal");
     for (let i = 0; i < reveals.length; i++) {
-        reveals[i].classList.remove("reveal");
+        reveals[i].classList.add("active");
     }
+} else {
+    window.addEventListener("scroll", reveal);
 }
 
 function reveal() {
@@ -36,8 +38,6 @@ function reveal() {
         }
     }
 }
-
-window.addEventListener("scroll", reveal);
 
 
 // Hide navbar on scroll down, display on scroll up ====================================================================

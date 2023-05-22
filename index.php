@@ -20,7 +20,7 @@
 
 <body>
     <nav id="navbar">
-        <a class="logo" href="#home"><object id="nav-logo" data="/public/assets/logo.svg" type="image/svg+xml"></object></a>
+        <a class="logo" href="#home"><object id="nav-logo" data="/public/assets/dark-logo.svg" type="image/svg+xml"></object></a>
 
         <ul>
             <li><a href="#projects" class="hover-underline-animation">Projects</a></li>
@@ -194,7 +194,7 @@
         <footer>
             <div class="info">
                 <p>©2022 - 2023 &nbsp; Made by CC</p>
-                <object id="footer-logo" data="public/assets/logo.svg" type="image/svg+xml"></object>
+                <object id="footer-logo" data="public/assets/light-logo.svg" type="image/svg+xml"></object>
             </div>
             <div class="go-to-top">
                 <a href="#home">

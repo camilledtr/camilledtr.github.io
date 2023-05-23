@@ -85,7 +85,7 @@ window.addEventListener('scroll', function () {
 const menuBtn = document.querySelector('.menu-btn');
 const BtnBar1 = document.querySelector('.menu-btn__bar-1');
 const BtnBar2 = document.querySelector('.menu-btn__bar-2');
-const navCategories = document.querySelectorAll('#navbar ul li');
+const navCategories = document.querySelectorAll('.navbar-reveal ul li');
 const navMenuCategories = document.querySelectorAll('.nav-menu ul li');
 const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark-primary');
 

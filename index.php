@@ -129,7 +129,7 @@
                     <img src="public/assets/projects/cocktail-home.png" alt="project 2">
                     <div class="project-text">
                         <h3>Cocktail</h3>
-                        <p>Website to manage enrollment to courses</p>
+                        <p>Web app to manage enrollment to courses</p>
                         <div class="stack">
                             <div class="techno">
                                 <p>Python</p>
@@ -157,7 +157,7 @@
                     <img src="public/assets/projects/portfolio-laptop-smartphone.png" alt="project 3">
                     <div class="project-text">
                         <h3>My portfolio</h3>
-                        <p>Share my journey</p>
+                        <p>Website to share my journey</p>
                         <div class="stack">
                             <div class="techno">
                                 <p>HTML/CSS</p>

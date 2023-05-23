@@ -234,7 +234,7 @@ div.secondary-btn:hover>a {
 
 /* ================ NAVBAR =================================================================== */
 
-#navbar {
+.navbar-reveal {
     font-size: 2.5rem;
     color: var(--dark-primary);
     display: flex;
@@ -243,8 +243,11 @@ div.secondary-btn:hover>a {
     width: 100%;
     position: fixed;
     z-index: 100;
-    animation: translate-down 1.9s 3s cubic-bezier(0.4, 0, 0, 1) forwards;
     visibility: hidden;
+}
+
+.navbar-reveal.active {
+    animation: translate-down 1.5s cubic-bezier(0.4, 0, 0, 1) forwards;
     animation-delay: 2s;
 }
 
@@ -271,7 +274,7 @@ div.secondary-btn:hover>a {
     transition: all 0.5s ease-in-out;
 }
 
-#navbar .logo {
+.navbar-reveal .logo {
     margin: auto 0 auto 5%;
 }
 
@@ -279,7 +282,7 @@ div.secondary-btn:hover>a {
     height: calc(3/5*var(--nav-height));
 }
 
-#navbar ul {
+.navbar-reveal ul {
     width: 40%;
     display: flex;
     align-items: center;
@@ -492,26 +495,32 @@ div.my-cv.primary-btn {
 
 .home .name .word-mask .name-reveal {
     transform: translateY(100%);
-    animation: translate-up-name 1s 1.2s cubic-bezier(0.5, 0, 0, 1) forwards;
 }
 
-.home .name-text .name-reveal:nth-of-type(1) {
-    animation-delay: 1.4s;
+.home .name .word-mask .name-reveal.active {
+    animation: translate-up-name 1s 0.2s cubic-bezier(0.5, 0, 0, 1) forwards;
 }
 
-.home .name-text .name-reveal:nth-of-type(3) {
-    animation-delay: 1.6s;
+.home .name-text .name-reveal.active:nth-of-type(1) {
+    animation-delay: 0.6s;
 }
 
-.home .name h1 span.hyphen {
+.home .name-text .name-reveal.active:nth-of-type(3) {
+    animation-delay: 0.8s;
+}
+
+.home .name h1 span.hyphen-reveal {
     visibility: hidden;
 }
 
-.home .name .hyphen {
+.home .name .hyphen-reveal {
     color: var(--secondary);
     font-size: 15rem;
     line-height: 8rem;
-    animation: hyphen-anim 1s 1.5s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+
+.home .name .hyphen-reveal.active {
+    animation: hyphen-anim 1s 1s cubic-bezier(0.2, 0, 0, 1) forwards;
 }
 
 @keyframes hyphen-anim {
@@ -542,14 +551,17 @@ div.my-cv.primary-btn {
     }
 }
 
-.home-text {
+.home-text-reveal {
     opacity: 0;
     margin-left: 5%;
     padding-right: 10%;
     font-size: 2.5rem;
-    animation: fade 2s 1.5s forwards;
     display: flex;
     flex-direction: column;
+}
+
+.home-text-reveal.active {
+    animation: fade 1.5s 1.8s forwards;
 }
 
 @keyframes fade {
@@ -563,12 +575,11 @@ div.my-cv.primary-btn {
 }
 
 
-.to-portfolio {
+.to-portfolio-reveal {
     position: relative;
     margin-top: 70px;
     padding: 1.5rem 3rem;
     opacity: 0;
-    animation: fade 0.6s forwards 3.8s;
     background-color: var(--medium-secondary);
     width: fit-content;
     border-radius: var(--border-radius);
@@ -578,12 +589,16 @@ div.my-cv.primary-btn {
     overflow: hidden;
 }
 
-.to-portfolio p {
+.to-portfolio-reveal.active {
+    animation: fade 0.6s forwards 3.8s;
+}
+
+.to-portfolio-reveal p {
     color: white;
     font-weight: 800;
 }
 
-.to-portfolio svg {
+.to-portfolio-reveal svg {
     margin-left: 1rem;
     width: 3rem;
     animation: translate-arrow 0.7s infinite alternate ease-in-out;
@@ -598,13 +613,13 @@ div.my-cv.primary-btn {
     }
 }
 
-.to-portfolio:hover {
+.to-portfolio-reveal:hover {
     cursor: pointer;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
     transform: scale(1.05)
 }
 
-.to-portfolio::before {
+.to-portfolio-reveal::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -620,13 +635,13 @@ div.my-cv.primary-btn {
     visibility: hidden;
 }
 
-.to-portfolio:hover::before {
+.to-portfolio-reveal:hover::before {
     transform: scaleX(1);
     transform-origin: left;
     visibility: visible;
 }
 
-.background-text {
+.background-text-reveal {
     position: absolute;
     font-size: 20rem;
     line-height: 15rem;
@@ -637,6 +652,9 @@ div.my-cv.primary-btn {
     bottom: 30px;
     right: 0%;
     font-family: 'Lobster two', cursive;
+}
+
+.background-text-reveal.active {
     animation: fade 2s 2s forwards;
 }
 
@@ -950,18 +968,18 @@ footer p {
         margin-top: 2vh;
     }
 
-    #navbar ul {
+    .navbar-reveal ul {
         width: 50%;
     }
 }
 
 /* PORTRAIT TABLETS */
 @media screen and (max-width: 900px) {
-    #navbar ul {
+    .navbar-reveal ul {
         width: auto;
     }
 
-    #navbar ul>li {
+    .navbar-reveal ul>li {
         display: none;
     }
 
@@ -978,7 +996,7 @@ footer p {
         font-size: 7rem;
     }
 
-    .home .to-portfolio {
+    .home .to-portfolio-reveal {
         margin-bottom: 8rem;
     }
 
@@ -1042,20 +1060,15 @@ footer p {
         margin-left: 10rem;
     }
 
-    .home .name h1:nth-child(2) .name-reveal:nth-of-type(1) {
-        animation-delay: 0.6s;
-    }
-
     .home .name h1:nth-child(2) .name-reveal:nth-of-type(3) {
-        animation-delay: 1s;
         margin-left: 6rem;
     }
 
-    .home-text {
+    .home-text-reveal {
         font-size: 2rem;
     }
 
-    .home .to-portfolio {
+    .home .to-portfolio-reveal {
         margin-top: 7vh;
         align-self: flex-end;
         margin-right: 10vw;

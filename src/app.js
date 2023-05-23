@@ -1,12 +1,28 @@
 //Loading page ============================================================================================================
 const loadingPage = document.getElementById("loading-page");
 loadingPage.style.display = "block";
+const revealAnims = [];
+const revealNames = document.querySelectorAll(".name-reveal");
+const revealHyphen = document.querySelector(".hyphen-reveal");
+const revealHomeText = document.querySelector(".home-text-reveal");
+const revealCTA = document.querySelector(".to-portfolio-reveal");
+const revealBackground = document.querySelector(".background-text-reveal");
+const revealNavbar = document.querySelector(".navbar-reveal");
+revealAnims.push(...revealNames);
+revealAnims.push(revealHyphen);
+revealAnims.push(revealHomeText);
+revealAnims.push(revealCTA);
+revealAnims.push(revealBackground);
+revealAnims.push(revealNavbar);
 
 window.onload = function () {
     const loader = document.getElementById("loading-logo");
     loader.classList.add("loaded");
     setTimeout(() => {
         loadingPage.style.display = "none";
+        for (let revealAnim of revealAnims) {
+            revealAnim.classList.add("active");
+        }
     }, 1000);
 }
 

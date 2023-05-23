@@ -1,3 +1,12 @@
+//Loading page ============================================================================================================
+window.onload = function () {
+    const loader = document.getElementById("loading-logo");
+    loader.classList.add("loaded");
+    setTimeout(() => {
+        document.getElementById("loading-page").style.display = "none";
+    }, 1000);
+}
+
 // Reveal text of sections when scroll =================================================================================
 const viewportWidth = window.innerWidth;
 

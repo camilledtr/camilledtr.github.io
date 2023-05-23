@@ -19,6 +19,11 @@
 </head>
 
 <body>
+    <div id="loading-page">
+        <div class="word-mask loader">
+            <object id="loading-logo" data="/public/assets/crop-logo.svg" type="image/svg+xml"></object>
+        </div>
+    </div>
     <nav id="navbar">
         <a class="logo" href="#home"><object id="nav-logo" data="/public/assets/dark-logo.svg" type="image/svg+xml"></object></a>
 
@@ -95,9 +100,9 @@
             <div class="projects-container">
                 <div class="project reveal">
                     <div class="img-container">
-                        <img src="public/assets/projects/ktapp-home.png" alt="project 1 - Home page" class="smartphone">
-                        <img src="public/assets/projects/ktapp-nav.png" alt="project 1 - Navigation menu" class="smartphone">
-                        <img src="public/assets/projects/ktapp-farmers.png" alt="project 1 - Farmer page" class="smartphone">
+                        <img src="public/assets/projects/ktapp-home.png" alt="project 1 - Home page" class="smartphone" loading="lazy">
+                        <img src="public/assets/projects/ktapp-nav.png" alt="project 1 - Navigation menu" class="smartphone" loading="lazy">
+                        <img src="public/assets/projects/ktapp-farmers.png" alt="project 1 - Farmer page" class="smartphone" loading="lazy">
                     </div>
                     <div class="project-text">
                         <h3>Knowledge Transfer</h3>
@@ -126,7 +131,7 @@
                     </div>
                 </div>
                 <div class="project reveal">
-                    <img src="public/assets/projects/cocktail-home.png" alt="project 2">
+                    <img src="public/assets/projects/cocktail-home.png" alt="project 2" loading="lazy">
                     <div class="project-text">
                         <h3>Cocktail</h3>
                         <p>Web app to manage enrollment to courses</p>
@@ -154,7 +159,7 @@
                     </div>
                 </div>
                 <div class="project reveal">
-                    <img src="public/assets/projects/portfolio-laptop-smartphone.png" alt="project 3">
+                    <img src="public/assets/projects/portfolio-laptop-smartphone.png" alt="project 3" loading="lazy">
                     <div class="project-text">
                         <h3>My portfolio</h3>
                         <p>Website to share my journey</p>
@@ -189,7 +194,7 @@
                 </div>
 
                 <div class="about-img reveal">
-                    <img src="public/assets/camille.png" alt="camille">
+                    <img src="public/assets/camille.png" alt="camille" loading="lazy">
                 </div>
             </div>
         </section>

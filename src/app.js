@@ -8,22 +8,35 @@ const revealHomeText = document.querySelector(".home-text-reveal");
 const revealCTA = document.querySelector(".to-portfolio-reveal");
 const revealBackground = document.querySelector(".background-text-reveal");
 const revealNavbar = document.querySelector(".navbar-reveal");
-revealAnims.push(...revealNames);
-revealAnims.push(revealHyphen);
-revealAnims.push(revealHomeText);
-revealAnims.push(revealCTA);
-revealAnims.push(revealBackground);
-revealAnims.push(revealNavbar);
 
 window.onload = function () {
     const loader = document.getElementById("loading-logo");
     loader.classList.add("loaded");
-    setTimeout(() => {
-        loadingPage.style.display = "none";
-        for (let revealAnim of revealAnims) {
-            revealAnim.classList.add("active");
+    if (viewportWidth < 600) {
+        for (let revealName of revealNames) {
+            revealName.classList.add("active");
         }
-    }, 1000);
+        revealHyphen.classList.add("active");
+        revealHomeText.classList.add("active");
+        revealCTA.classList.add("active");
+        revealBackground.classList.add("active");
+        revealNavbar.classList.add("active");
+        setTimeout(() => {
+            loadingPage.style.display = "none";
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            loadingPage.style.display = "none";
+            for (let revealName of revealNames) {
+                revealName.classList.add("active");
+            }
+            revealHyphen.classList.add("active");
+            revealHomeText.classList.add("active");
+            revealCTA.classList.add("active");
+            revealBackground.classList.add("active");
+            revealNavbar.classList.add("active");
+        }, 1000);
+    }
 }
 
 // Reveal text of sections when scroll =================================================================================

@@ -1,9 +1,12 @@
 //Loading page ============================================================================================================
+const loadingPage = document.getElementById("loading-page");
+loadingPage.style.display = "block";
+
 window.onload = function () {
     const loader = document.getElementById("loading-logo");
     loader.classList.add("loaded");
     setTimeout(() => {
-        document.getElementById("loading-page").style.display = "none";
+        loadingPage.style.display = "none";
     }, 1000);
 }
 

@@ -55,32 +55,6 @@ function reveal() {
 }
 
 
-// Hide navbar on scroll down, display on scroll up ====================================================================
-let lastScrollTop; // This Varibale will store the top position
-
-const navbar = document.getElementById('navbar'); // Get The NavBar
-
-window.addEventListener('scroll', function () {
-    // If the nav menu is open, we don't want the navbar to hide
-    if (!document.querySelector('.nav-menu').classList.contains('js-nav-open')) {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        //This line will get the location on scroll
-
-        if (scrollTop > lastScrollTop) { //if it is greater than the previous
-            navbar.classList.remove("scrolled-up");
-            navbar.classList.add("scrolled-down");
-        }
-
-        else {
-            navbar.classList.remove("scrolled-down");
-            navbar.classList.add("scrolled-up");
-        }
-
-        lastScrollTop = scrollTop; //New Position Stored
-    }
-});
-
-
 // Open and close the nav menu ===================================================================================================
 const menuBtn = document.querySelector('.menu-btn');
 const BtnBar1 = document.querySelector('.menu-btn__bar-1');
@@ -91,7 +65,7 @@ const darkPrimaryColor = getComputedStyle(document.querySelector(':root')).getPr
 
 menuBtn.addEventListener('click', e => {
     const viewportWidth = window.innerWidth;
-    const navLogo = document.querySelector('#nav-logo').contentDocument.querySelector('svg').querySelector('path');
+    const navLogo = document.getElementById('nav-logo').contentDocument.querySelector('svg').querySelector('path');
     menuBtn.classList.toggle('js-btn-open');
     document.querySelector('.nav-menu').classList.toggle('js-nav-open');
 
@@ -130,6 +104,7 @@ menuBtn.addEventListener('click', e => {
 for (let navMenuCategory of navMenuCategories) {
     navMenuCategory.addEventListener('click', e => {
         const viewportWidth = window.innerWidth;
+        const navLogo = document.getElementById('nav-logo').contentDocument.querySelector('svg').querySelector('path');
         menuBtn.classList.toggle('js-btn-open');
         document.querySelector('.nav-menu').classList.toggle('js-nav-open');
         BtnBar1.style.backgroundColor = darkPrimaryColor;
@@ -137,7 +112,7 @@ for (let navMenuCategory of navMenuCategories) {
         setTimeout(() => {
             menuBtn.style.position = "static";
             menuBtn.style.right = "auto";
-            navLogo.setAttribute('fill', "white");
+            navLogo.setAttribute('fill', darkPrimaryColor);
             if (viewportWidth > 900) {
                 for (let navCategory of navCategories) {
                     navCategory.style.display = "block";

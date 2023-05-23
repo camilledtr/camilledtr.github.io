@@ -194,7 +194,7 @@
         <footer>
             <div class="info">
                 <p>©2022 - 2023 &nbsp; Made by CC</p>
-                <object id="footer-logo" data="public/assets/light-logo.svg" type="image/svg+xml"></object>
+                <object id="footer-logo" data="public/assets/white-logo.svg" type="image/svg+xml"></object>
             </div>
             <div class="go-to-top">
                 <a href="#home">

@@ -244,6 +244,8 @@ div.secondary-btn:hover>a {
     position: fixed;
     z-index: 100;
     visibility: hidden;
+    top: -8rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar-reveal.active {
@@ -265,13 +267,8 @@ div.secondary-btn:hover>a {
 }
 
 .scrolled-down {
-    top: -8rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.scrolled-up {
     top: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-reveal .logo {

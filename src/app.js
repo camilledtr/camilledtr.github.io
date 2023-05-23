@@ -69,14 +69,17 @@ function reveal() {
 
 // Hide the navbar when scrolling down and show it when scrolling up =====================================================
 let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.querySelector(".navbar-reveal").classList.add("scrolled-down");
-    } else {
-        document.querySelector(".navbar-reveal").classList.remove("scrolled-down");
+
+if (viewportWidth > 600) {
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.querySelector(".navbar-reveal").classList.add("scrolled-down");
+        } else {
+            document.querySelector(".navbar-reveal").classList.remove("scrolled-down");
+        }
+        prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
 }
 
 

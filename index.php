@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stardom font -->
     <link href="https://api.fontshare.com/v2/css?f[]=stardom@400&display=swap" rel="stylesheet">
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <!-- Lobster two -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
@@ -32,9 +34,10 @@
             <li><a href="#about" class="hover-underline-animation">About</a></li>
             <li><a href="#contact" class="hover-underline-animation">Contact</a></li>
             <li>
-                <div class="my-cv primary-btn"><a class="my-cv" href="public/assets/01_DURTHALLER-RENARD_resume.pdf" download><span class="material-symbols-outlined">
-                            download
-                        </span>My CV</a>
+                <div class="my-cv primary-btn">
+                    <a class="my-cv" href="public/assets/01_DURTHALLER-RENARD_resume.pdf" download>
+                        <span class="material-symbols-outlined">download</span>
+                    My CV</a>
                 </div>
             </li>
             <div class="menu-btn">
@@ -73,7 +76,7 @@
                     <h1 class="name-text">
                         <span class="name-reveal">Durthaller</span>
                         <span class="hyphen-reveal">-</span>
-                        <span class="name-reveal">Renard</span>
+                        <span class="name-reveal third">Renard</span>
                     </h1>
                 </div>
             </div>
@@ -92,9 +95,9 @@
             <h1 class="background-text-reveal">Hello, there.</h1>
         </section>
 
-        <section id="projects" class="projects reveal">
+        <section id="projects" class="projects">
             <div class="title">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title reveal">Projects</h2>
             </div>
 
             <div class="projects-container">

@@ -17,7 +17,7 @@
     --super-light-tertiary: #fcecf0d1;
     --light-background-color: #e9e9ef6b;
     --border-radius: 30px;
-    --nav-height: 10rem;
+    --nav-height: 12vh;
     --section-padding-top: calc(var(--nav-height) + 0.5rem);
 }
 
@@ -215,7 +215,7 @@ div.secondary-btn:hover>a {
 }
 
 #loading-logo {
-    width: 15rem;
+    width: 15vh;
 }
 
 #loading-logo.loaded {
@@ -244,7 +244,7 @@ div.secondary-btn:hover>a {
     position: fixed;
     z-index: 100;
     visibility: hidden;
-    top: -8rem;
+    top: 0;
     transition: all 0.5s ease-in-out;
 }
 
@@ -267,16 +267,17 @@ div.secondary-btn:hover>a {
 }
 
 .scrolled-down {
-    top: 0;
+    top: -12vh;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar-reveal .logo {
     margin: auto 0 auto 5%;
+    padding-top: 1vh;
 }
 
 #nav-logo {
-    height: calc(3/5*var(--nav-height));
+    height: calc(0.6*var(--nav-height));
 }
 
 .navbar-reveal ul {
@@ -291,6 +292,10 @@ div.secondary-btn:hover>a {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
+    font-size: calc(0.7rem + 1.5vh);
+    font-family:'Poppins';
+    font-weight: 100;
+    text-transform: uppercase;
 }
 
 .hover-underline-animation::after {
@@ -312,7 +317,7 @@ div.secondary-btn:hover>a {
 }
 
 .my-cv span {
-    width: 3rem;
+    font-size: 2.5rem;
     position: absolute;
     /*move the icon*/
     margin-left: -2.8rem;
@@ -322,6 +327,13 @@ div.secondary-btn:hover>a {
 div.my-cv.primary-btn {
     /*widen the btn for the download icon*/
     padding-left: 4rem;
+}
+
+div.my-cv.primary-btn a {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-size: calc(0.7rem + 1.5vh);
+    margin: auto;
 }
 
 .menu-btn {
@@ -434,10 +446,6 @@ div.my-cv.primary-btn {
 .home {
     min-height: calc(100vh - var(--nav-height));
     width: 100%;
-    /* background-image: url(../public/backgrounds/back-flower.jpg); */
-    background-repeat: no-repeat;
-    background-size: auto calc(100% - var(--nav-height));
-    background-position: right bottom;
     padding-top: var(--section-padding-top);
 }
 
@@ -466,9 +474,10 @@ div.my-cv.primary-btn {
 }
 
 .home .name {
-    margin: 70px 0 7vh 5%;
+    margin: 7vh 0 7vh 5%;
     font-family: 'Lobster two', cursive;
-    font-size: 5rem;
+    font-size: 6vh;
+    line-height: 9.5vh;
 }
 
 .home .name .name-text {
@@ -476,7 +485,6 @@ div.my-cv.primary-btn {
 }
 
 .home .name h1 {
-    margin-bottom: -1rem;
     margin-left: -1rem;
 }
 
@@ -484,10 +492,11 @@ div.my-cv.primary-btn {
     height: fit-content;
     width: fit-content;
     overflow: hidden;
+    margin-left: -2vh;
 }
 
-.home .word-mask:nth-of-type(1) {
-    padding-left: 1rem;
+.home .word-mask:nth-of-type(1), .home .word-mask:nth-of-type(2) {
+    padding-left: 3vh;
 }
 
 .home .name .word-mask .name-reveal {
@@ -512,39 +521,37 @@ div.my-cv.primary-btn {
 
 .home .name .hyphen-reveal {
     color: var(--secondary);
-    font-size: 15rem;
-    line-height: 8rem;
+    font-size: 15vh;
+    visibility: hidden;
+    line-height: 5vh;
+    margin-top: 1.3vh;
 }
 
 .home .name .hyphen-reveal.active {
-    animation: hyphen-anim 1s 1s cubic-bezier(0.2, 0, 0, 1) forwards;
+    animation: hyphen-anim 1s 1.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 @keyframes hyphen-anim {
     0% {
-        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-        transform: translateY(-200%) rotate(90deg);
-        visibility: visible;
-    }
-
-    75% {
-        visibility: visible;
-        transform: translateY(0) rotate(90deg);
+        transform: translateY(-100%) rotateX(360deg);
+        visibility: hidden;
     }
 
     100% {
         visibility: visible;
-        transform: translateY(20%) rotate(180deg);
+        transform: translateY(0) rotateX(0);
     }
 }
 
 @keyframes translate-up-name {
     from {
         transform: translateY(100%);
+        visibility: hidden;
     }
 
     to {
         transform: translateY(0);
+        visibility: visible;
     }
 }
 
@@ -555,6 +562,10 @@ div.my-cv.primary-btn {
     font-size: 2.5rem;
     display: flex;
     flex-direction: column;
+}
+
+.home-text-reveal > * {
+    margin-left: 0.5vh;
 }
 
 .home-text-reveal.active {
@@ -571,15 +582,25 @@ div.my-cv.primary-btn {
     }
 }
 
+.home-text-reveal h2 {
+    font-size: 4vh;
+    line-height: 7vh;
+}
+
+.home-text-reveal p {
+    font-size: 3vh;
+    line-height: 4vh;
+}
+
 
 .to-portfolio-reveal {
     position: relative;
-    margin-top: 70px;
-    padding: 1.5rem 3rem;
+    margin-top: 8vh;
+    padding: 2.5vh 4vh;
     opacity: 0;
     background-color: var(--medium-secondary);
     width: fit-content;
-    border-radius: var(--border-radius);
+    border-radius: 5vh;
     display: flex;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease-in-out;
@@ -593,11 +614,12 @@ div.my-cv.primary-btn {
 .to-portfolio-reveal p {
     color: white;
     font-weight: 800;
+    font-size: 3vh;
 }
 
 .to-portfolio-reveal svg {
     margin-left: 1rem;
-    width: 3rem;
+    width: 3vh;
     animation: translate-arrow 0.7s infinite alternate ease-in-out;
 }
 
@@ -840,12 +862,12 @@ div.my-cv.primary-btn {
 
 .contact.section-title {
     color: white;
+    margin-bottom: 50px;
 }
 
 form {
     max-width: 500px;
-    padding: 0 20px 100px 20px;
-    min-height: calc(100vh - 10rem - 100px);
+    padding: 0 20px 150px 20px;
     margin: 0 auto;
     text-align: left;
     font-size: 2rem;
@@ -935,7 +957,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 20vh;
+    height: 15vh;
 }
 
 .go-to-top span {
@@ -948,11 +970,16 @@ footer p {
 
 /* TABLETS */
 @media screen and (max-width: 1400px) {
+    .about .section-title {
+        margin-bottom: 10vh;
+    }
+
     .projects .project {
         flex-direction: column;
         padding-left: 0;
         margin-bottom: 10vh;
         gap: 3rem;
+        height: fit-content;
     }
 
     .project {
@@ -970,6 +997,12 @@ footer p {
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .navbar-reveal ul {
+        width: 60%;
+    }
+}
+
 /* PORTRAIT TABLETS */
 @media screen and (max-width: 900px) {
     .navbar-reveal ul {
@@ -978,6 +1011,7 @@ footer p {
 
     .navbar-reveal ul>li {
         display: none;
+        visibility: hidden;
     }
 
     .nav-menu-list a {
@@ -989,12 +1023,33 @@ footer p {
         margin-top: calc(50vh - 4*10rem/2);
     }
 
-    .home .name-reveal {
-        font-size: 7rem;
+    .home .name {
+        font-size: 4.5vh;
+        line-height: 8vh;
     }
 
-    .home .to-portfolio-reveal {
-        margin-bottom: 8rem;
+    .home .name .hyphen-reveal {
+        font-size: 10vh;
+        margin-top: 1vh;
+    }
+
+    .home-text-reveal h2 {
+        font-size: 3.8vh;
+        line-height: 6vh;
+    }
+
+    .home-text-reveal p {
+        font-size: 2.6vh;
+        line-height: 3.8vh;
+    }
+
+    .to-portfolio-reveal {
+        padding: 2vh 3.5vh;
+        margin-top: 6vh;
+    }
+
+    h2.section-title {
+        padding-top: 10vh;
     }
 
     .project-text {
@@ -1048,16 +1103,18 @@ footer p {
         flex-direction: column;
     }
 
-    .home .name h1 span.hyphen {
-        animation: translate-up-name .75s cubic-bezier(0.2, 0, 0, 1) forwards;
-        animation-delay: 0.8s;
-        transform: rotate(0deg) translate(0, 0);
-        line-height: 3rem;
-        margin-top: -2.5rem;
-        margin-left: 10rem;
+    .home .name .hyphen-reveal {
+        margin-top: -2vh;
+        margin-left: 11rem;
+        line-height: 4vh;
+        transform: translateY(100%);
     }
 
-    .home .name h1:nth-child(2) .name-reveal:nth-of-type(3) {
+    .home .name .hyphen-reveal.active {
+        animation: translate-up-name 1s 0.9s cubic-bezier(0.2, 0, 0, 1) forwards;
+    }
+
+    .home .name-text .name-reveal.third {
         margin-left: 6rem;
     }
 
@@ -1077,8 +1134,8 @@ footer p {
         text-align: start;
     }
 
-    .about .section-title {
-        margin-bottom: 3rem;
+    h2.section-title {
+        padding-top: 6vh;
     }
 
     .about-container {
@@ -1092,24 +1149,8 @@ footer p {
     .about-text {
         width: 80vw;
     }
-}
 
-/* SMALL PHONES */
-@media screen and (max-height: 500px) {
-    .home {
-        background-size: calc(25rem + 50%);
+    .go-to-top span {
+        margin-bottom: 2vh;
     }
 }
-
-
-
-/*TODO:
-add resume and social links to the navmenu
-reduce top margin for section titles by changing the place where the user is sent to when we click on the link in the navbar
-OK to check: zoom out home background for phones to see the text
-change the background for projects section (manage the svg element),
-OK to check: phone responsive,
-projects section: review flex column/row according to the ratio screen
-contact form to send for real,
-put a pop up button in the contact section that show off my email
-customize the loading screen*/

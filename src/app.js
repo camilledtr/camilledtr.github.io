@@ -74,11 +74,15 @@ if (viewportWidth > 600) {
     window.onscroll = function () {
         const currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document.querySelector(".navbar-reveal").classList.add("scrolled-down");
-        } else {
             document.querySelector(".navbar-reveal").classList.remove("scrolled-down");
+        } else {
+            document.querySelector(".navbar-reveal").classList.add("scrolled-down");
         }
         prevScrollpos = currentScrollPos;
+    }
+
+    window.onbeforeunload = function () {
+        document.querySelector(".navbar-reveal").classList.remove("scrolled-down");
     }
 }
 

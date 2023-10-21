@@ -26,6 +26,4 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           local-dir: ./
           log-level: standard
-          # Explanation server-dir: using './' created '/publicFolder/publicFolder/[build]'.
-          # Likely cuz of the FTP account's directory settings in Hostinger
           server-dir: ../home/u618482631/domains/camilledurthallerrenard.com/public_html

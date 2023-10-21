@@ -203,8 +203,8 @@
         </section>
 
         <section id="contact" class="contact">
-            <h2 class="contact section-title reveal">Contact me</h2>
-            <form class="reveal" action="#contact" method="post">
+            <h2 class="contact section-title">Contact me</h2>
+            <form action="#contact" method="post">
                 <label for="name">Name :</label><br>
                 <input class="form-input" type="text" id="name" name="name" required><br>
                 <label for="email">Email :</label><br>
@@ -222,7 +222,7 @@
                     $message = $_POST['message'];
 
                     $mailTo = "camilledr10@gmail.com";
-                    $result = mail($mailTo, $subject, $message, 'From:' . $email);
+                    $result = mail($mailTo, 'From my website: ' . $subject, $message, 'From:' . $email);
 
                     if ($result) {
                         $statusMessage = 'Mail successfully sent!';
@@ -232,7 +232,7 @@
                 }
                 ?>
                 <?php if (isset($statusMessage)) { ?>
-                    <p id="form-status" style="text-align: center; color: var(--dark-secondary); margin-top: 1rem; font-size: 2rem; font-weight: 800;"><?php echo $statusMessage; ?></p>
+                    <p id="form-status" style="text-align: center; color: var(--dark-primary); margin-top: 1rem; font-size: 2rem; font-weight: 800;"><?php echo $statusMessage; ?></p>
                 <?php } ?>
             </form>
         </section>

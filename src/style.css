@@ -1153,6 +1153,7 @@ footer p {
 
     h2.section-title {
         padding-top: 6vh;
+        padding-bottom: 0;
         font-size: 4rem;
         font-weight: 800;
         font-family: 'system-ui', sans-serif;
@@ -1164,6 +1165,8 @@ footer p {
 
     .projects .projects-container {
         gap: 0;
+        padding-top: 0;
+        padding-bottom: 2rem;
     }
 
     .project img {

@@ -77,10 +77,16 @@ a {
 h2.section-title {
     font-size: 6rem;
     font-family: 'Stardom', sans-serif;
-    margin-left: 5%;
+    padding: 0 5%;
     color: var(--dark-primary);
     padding-top: var(--section-padding-top);
     padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    h2.section-title {
+        text-align: center;
+    }
 }
 
 div.primary-btn,
@@ -752,6 +758,12 @@ div.my-cv.primary-btn a {
     font-size: 4rem;
     font-family: 'Stardom', cursive;
     color: var(--medium-primary);
+}
+
+@media screen and (max-width: 600px) {
+    .project-text h3 {
+        font-size: 3rem;
+    }
 }
 
 .project-text .stack {

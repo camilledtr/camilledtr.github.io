@@ -1151,6 +1151,14 @@ footer p {
         padding-top: 6vh;
     }
 
+    .projects .projects-container {
+        gap: 0;
+    }
+
+    .project img {
+        display: none;
+    }
+
     .project-card .stack {
         width: 100%;
         padding-right: 0;

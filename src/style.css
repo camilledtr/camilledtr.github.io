@@ -1098,6 +1098,11 @@ footer p {
 
 /* PHONES */
 @media screen and (max-width: 600px) {
+    body {
+        font-family: 'system-ui', sans-serif;
+        font-size: 1.5rem;
+    }
+
     #nav-logo {
         height: 5rem;
     }
@@ -1149,6 +1154,11 @@ footer p {
 
     h2.section-title {
         padding-top: 6vh;
+        font-size: 4rem;
+    }
+
+    .projects .section-title {
+        margin-bottom: 0;
     }
 
     .projects .projects-container {
@@ -1157,6 +1167,10 @@ footer p {
 
     .project img {
         display: none;
+    }
+
+    .project-card h3 {
+        font-size: 2.5rem;
     }
 
     .project-card .stack {
@@ -1174,6 +1188,10 @@ footer p {
 
     .about-text {
         width: 80vw;
+    }
+
+    .about-text p {
+        font-size: 1.5rem;
     }
 
     .go-to-top span {

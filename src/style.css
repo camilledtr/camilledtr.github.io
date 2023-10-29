@@ -1135,8 +1135,9 @@ footer p {
         margin-left: 6rem;
     }
 
-    .home-text-reveal {
-        font-size: 1.2rem;
+    .home-text-reveal p {
+        font-size: 2.3vh;
+        line-height: 3.2vh;
     }
 
     .home .to-portfolio-reveal {

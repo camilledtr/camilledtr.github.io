@@ -884,7 +884,6 @@ form {
     padding: 0 20px 150px 20px;
     margin: 0 auto;
     text-align: left;
-    font-size: 2rem;
 }
 
 label {
@@ -1137,7 +1136,7 @@ footer p {
     }
 
     .home-text-reveal {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .home .to-portfolio-reveal {
@@ -1155,6 +1154,7 @@ footer p {
     h2.section-title {
         padding-top: 6vh;
         font-size: 4rem;
+        font-family: 'Poppins', sans-serif;
     }
 
     .projects .section-title {
@@ -1170,7 +1170,8 @@ footer p {
     }
 
     .project-card h3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        font-family: 'Poppins', sans-serif;
     }
 
     .project-card .stack {
@@ -1192,6 +1193,10 @@ footer p {
 
     .about-text p {
         font-size: 1.5rem;
+    }
+
+    label {
+        margin-bottom: -1.5rem;
     }
 
     .go-to-top span {

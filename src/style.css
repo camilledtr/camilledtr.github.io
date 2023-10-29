@@ -956,7 +956,6 @@ footer .info {
 }
 
 footer p {
-    font-size: 2rem;
     letter-spacing: 2px;
     color: white
 }
@@ -982,7 +981,7 @@ footer p {
 /* TABLETS */
 @media screen and (max-width: 1400px) {
     .about .section-title {
-        margin-bottom: 10vh;
+        margin-bottom: 8vh;
     }
 
     .projects .project {
@@ -1166,7 +1165,7 @@ footer p {
     .projects .projects-container {
         gap: 0;
         padding-top: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
     }
 
     .project img {
@@ -1185,6 +1184,7 @@ footer p {
 
     .about-container {
         gap: 4rem;
+        padding-bottom: 6rem;
     }
 
     .about img {
@@ -1201,6 +1201,10 @@ footer p {
 
     label {
         margin-bottom: -1.5rem;
+    }
+
+    form {
+        padding-bottom: 6rem;
     }
 
     .go-to-top span {

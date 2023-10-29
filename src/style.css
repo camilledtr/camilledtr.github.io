@@ -409,6 +409,14 @@ div.my-cv.primary-btn a {
     animation: textAppear 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .3s both;
 }
 
+@media screen and (max-width: 600px) {
+    .js-nav-open .nav-menu-list a {
+        opacity: 1;
+        animation: none;
+        letter-spacing: 0.2rem;
+    }
+}
+
 @keyframes textAppear {
     0% {
         letter-spacing: 1em;

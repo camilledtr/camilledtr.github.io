@@ -227,7 +227,7 @@
                     if ($result) {
                         $statusMessage = 'Mail successfully sent!';
                     } else {
-                        $statusMessage = 'Something went wrong. Please try again or contact the administrator: <a href="mailto:camilledr10@gmail.com" target="_blank">Send email</a>';
+                        $statusMessage = 'Something went wrong. Please try again or contact the administrator: <a style="font-weight: 800; text-decoration: underline;" href="mailto:camilledr10@gmail.com" target="_blank">camilledr10@gmail.com</a>';
                     }
                 }
                 ?>

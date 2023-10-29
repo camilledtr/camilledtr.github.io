@@ -51,7 +51,7 @@ body {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: 1s all ease;
 }
 
 .reveal.active {
@@ -375,7 +375,7 @@ div.my-cv.primary-btn a {
     height: 100vh;
     background: linear-gradient(90deg, var(--dark-primary) 0%, var(--primary) 100%);
     position: fixed;
-    transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transform: translateY(-100vh);
     text-align: center;
 }
@@ -397,7 +397,7 @@ div.my-cv.primary-btn a {
 }
 
 .js-nav-open .nav-menu-list a {
-    animation: textAppear 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
+    animation: textAppear 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .3s both;
 }
 
 @keyframes textAppear {
@@ -635,7 +635,7 @@ div.my-cv.primary-btn a {
 .to-portfolio-reveal:hover {
     cursor: pointer;
     box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05)
+    transform: scale(1.02)
 }
 
 .to-portfolio-reveal::before {

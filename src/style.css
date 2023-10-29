@@ -846,6 +846,7 @@ div.my-cv.primary-btn a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-left: 5%;
 }
 
 .about-text p {
@@ -1074,6 +1075,7 @@ footer p {
 
     .about-text {
         width: 70vw;
+        margin-left: 0;
     }
 
     footer {

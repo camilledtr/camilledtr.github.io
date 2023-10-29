@@ -410,9 +410,18 @@ div.my-cv.primary-btn a {
 
 @media screen and (max-width: 600px) {
     .js-nav-open .nav-menu-list a {
-        opacity: 1;
-        animation: none;
+        animation: opacityReveal 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) .3s both;
         letter-spacing: 0.2rem;
+    }
+}
+
+@keyframes opacityReveal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

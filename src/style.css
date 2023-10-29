@@ -10,6 +10,18 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: 'Lobster two';
+    src: url('../public/assets/fonts/LobsterTwo-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
 :root {
     font-size: 62.5%;
     --primary: #9F9DE6;

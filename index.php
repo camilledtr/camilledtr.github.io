@@ -205,13 +205,13 @@
         <section id="contact" class="contact">
             <h2 class="contact section-title">Contact me</h2>
             <form action="#contact" method="post">
-                <label for="name">Name :</label><br>
+                <label for="name">Name</label><br>
                 <input class="form-input" type="text" id="name" name="name" required><br>
-                <label for="email">Email :</label><br>
+                <label for="email">Email</label><br>
                 <input class="form-input" type="email" id="email" name="email" required><br>
-                <label for="subject">Subject :</label><br>
+                <label for="subject">Subject</label><br>
                 <input class="form-input" type="text" id="subject" name="subject" required><br>
-                <label for="message">Message :</label><br>
+                <label for="message">Message</label><br>
                 <textarea class="form-input" id="message" name="message" required></textarea><br>
                 <input type="submit" class="primary-btn" value="Send">
                 <?php

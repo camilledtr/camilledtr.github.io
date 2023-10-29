@@ -6,7 +6,7 @@
      width="40mm" height="40mm"
      viewBox="0 0 540 557">
   <path id="pgAdmin"
-        fill="#336791" stroke="none"
+        fill="white" stroke="none"
         d="M 222.00,343.00
            C 215.75,341.86 210.01,341.02 204.00,338.77
              201.59,337.87 198.21,335.68 195.72,336.92

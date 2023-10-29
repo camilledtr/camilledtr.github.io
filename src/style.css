@@ -74,6 +74,10 @@ a {
     font-weight: 600;
 }
 
+a.disabled {
+    cursor: default;
+}
+
 h2.section-title {
     font-size: 6rem;
     font-family: 'Stardom', sans-serif;
@@ -95,7 +99,7 @@ input.primary-btn {
     color: var(--dark-primary);
     border-radius: var(--border-radius);
     border: var(--dark-primary) 2px solid;
-    padding: 0.8rem 2rem;
+    padding: 0.6rem 2rem;
 }
 
 div.primary-btn:hover,
@@ -122,7 +126,7 @@ div.secondary-btn {
     position: relative;
 }
 
-div.secondary-btn:hover {
+div.secondary-btn:not(.disabled):hover {
     background-color: var(--dark-secondary);
     border-color: var(--dark-secondary);
     -webkit-animation: jello-horizontal 0.9s both;
@@ -331,24 +335,13 @@ div.secondary-btn:hover>a {
     transform-origin: left;
 }
 
-.my-cv span {
-    font-size: 2.5rem;
-    position: absolute;
-    /*move the icon*/
-    margin-left: -2.8rem;
-    margin-top: 0.4rem;
-}
-
-div.my-cv.primary-btn {
-    /*widen the btn for the download icon*/
-    padding-left: 4rem;
-}
-
 div.my-cv.primary-btn a {
     font-family: 'Poppins';
     font-weight: 100;
     font-size: calc(0.7rem + 1.5vh);
-    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .menu-btn {
@@ -710,7 +703,6 @@ div.my-cv.primary-btn a {
 }
 
 .projects .projects-container {
-    font-size: 2.5rem;
     color: var(--dark-primary);
     padding: 5rem;
     padding-bottom: 20rem;
@@ -740,7 +732,7 @@ div.my-cv.primary-btn a {
     max-height: 50vh;
 }
 
-.project-text {
+.project-card {
     display: flex;
     flex-direction: column;
     width: 35vw;
@@ -752,89 +744,73 @@ div.my-cv.primary-btn a {
     border: var(--dark-primary) solid 3px;
     border-radius: 20px;
     color: black;
+    position: relative;
 }
 
-.project-text h3 {
-    font-size: 4rem;
+.redirect-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--medium-primary);
+}
+
+.redirect-icon:hover {
+    color: var(--dark-primary);
+    transition: all 0.1s ease-in-out;
+}
+
+.project-card h3 {
+    font-size: 3rem;
     font-family: 'Stardom', cursive;
     color: var(--medium-primary);
 }
 
-@media screen and (max-width: 600px) {
-    .project-text h3 {
-        font-size: 3rem;
-    }
+.project-card p {
+    width: 100%;
+    text-align: left;
+    font-family: 'system-ui', sans-serif;
+    font-size: 1.5rem;
 }
 
-.project-text .stack {
+.project-card .stack {
     margin-top: 2rem;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-right: 20%;
+    justify-content: flex-start;
 }
 
-.project-text .stack .techno {
+.project-card .stack .techno {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: row-reverse;
+    gap: .6rem;
     height: 100%;
+    background-color: var(--medium-primary);
+    padding: 0.6rem 1.1rem;
+    border-radius: 5rem;
+    transition: all 0.2s ease-in-out;
 }
 
-.project-text .stack .techno svg,
-.project-text .stack .techno object,
-.project-text .stack .techno img {
-    margin-top: 15px;
-    width: 40px;
+.project-card .stack .techno:hover {
+    background-color: var(--dark-primary);
 }
 
-.project-text .stack .techno svg.js-logo {
-    width: 35px;
+.project-card .stack .techno object {
+    width: 1.4rem;
+    max-height: 1.4rem;
 }
 
-.project-text .stack .techno .sqlalch-logo {
-    width: 50px;
-    margin-top: 10px;
-}
-
-
-.project-text .stack .techno .icons {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-}
-
-.project-text .stack .techno .icons svg {
-    width: 30px;
-}
-
-.project-text div.secondary-btn {
-    width: 10rem;
+.stack span {
     text-align: center;
-    align-self: flex-end;
-    margin-top: 5rem;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'system-ui', sans-serif;
+    font-weight: 500;
 }
-
-.stack p {
-    text-align: center;
-    font-family: 'Consolas', monospace;
-    font-size: 1.7rem;
-    margin-bottom: 0.8rem;
-}
-
-.project-text .more {
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.project-text .coming-soon {
-    margin-top: 0.5rem;
-    font-size: 1.8rem;
-    color: var(--tertiary);
-}
-
 
 /* ================ ABOUT ==================================================================== */
 
@@ -942,8 +918,8 @@ input[type=submit] {
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
-    border: 3px solid white;
-    padding: 1.5rem 4rem;
+    border: 2px solid white;
+    padding: .8rem 3.5rem;
     border-radius: 4rem;
 }
 
@@ -989,10 +965,9 @@ footer p {
     height: 15vh;
 }
 
-.go-to-top span {
-    font-size: 7rem;
+.go-to-top a {
     color: white;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 /* ================ MEDIA QUERIES ============================================================= */
@@ -1015,7 +990,7 @@ footer p {
         align-items: center;
     }
 
-    .project .project-text {
+    .project .project-card {
         text-align: center;
         align-items: center;
         margin-top: 2vh;
@@ -1081,7 +1056,7 @@ footer p {
         padding-top: 10vh;
     }
 
-    .project-text {
+    .project-card {
         width: 65vw;
         font-size: 2rem;
     }
@@ -1165,6 +1140,11 @@ footer p {
 
     h2.section-title {
         padding-top: 6vh;
+    }
+
+    .project-card .stack {
+        width: 100%;
+        padding-right: 0;
     }
 
     .about-container {

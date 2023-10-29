@@ -1136,7 +1136,7 @@ footer p {
     }
 
     .home-text-reveal {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .home .to-portfolio-reveal {
@@ -1154,7 +1154,8 @@ footer p {
     h2.section-title {
         padding-top: 6vh;
         font-size: 4rem;
-        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        font-family: 'system-ui', sans-serif;
     }
 
     .projects .section-title {
@@ -1171,7 +1172,7 @@ footer p {
 
     .project-card h3 {
         font-size: 2.2rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'system-ui', sans-serif;
     }
 
     .project-card .stack {

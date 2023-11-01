@@ -5,7 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camille Durthaller-Renard - My portfolio</title>
+    <title>Camille Durthaller-Renard - My developer portfolio</title>
+    <meta name="description" content="I'm Camille Durthaller-Renard, a full stack developer transforming ideas into creative
+    and user-focused digital products. See my portfolio. Contact me.
+    web development projects,
+    software engineer salary,
+    software engineer qualifications,
+    software engineer certifications,
+    software engineer experience,
+    freelance software engineer,
+    freelance developer,
+    developer portfolio,
+    developer portfolio website,
+    developer resume,
+    developer cv,
+    developer cover letter,
+    developer interview,
+    programming,
+    portfolio website,
+    web development,
+    frontend developer,
+    full stack developer,
+    software engineer,
+    software developer,
+    software engineer portfolio,
+    software engineer resume,
+    software engineer cv,
+    software engineer cover letter,
+    software engineer interview,
+    backend developer,
+    software engineering principles,
+    agile software development,
+    software engineer remote jobs">
     <link rel="icon" href="public/assets/crop-logo.svg" type="image/svg+xml">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

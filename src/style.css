@@ -513,16 +513,19 @@ div.my-cv.primary-btn a {
 .home .name {
     margin: 7vh 0 7vh 5%;
     font-family: 'Lobster two', cursive;
-    font-size: 6vh;
+}
+
+.name-reveal {
+    font-size: 9vh;
     line-height: 9.5vh;
+}
+
+.name-reveal:not(.third) {
+    margin-left: -1rem;
 }
 
 .home .name .name-text {
     display: flex;
-}
-
-.home .name h1 {
-    margin-left: -1rem;
 }
 
 .home .word-mask {
@@ -552,7 +555,7 @@ div.my-cv.primary-btn a {
     animation-delay: 0.8s;
 }
 
-.home .name h1 span.hyphen-reveal {
+.home .name .word-mask span.hyphen-reveal {
     visibility: hidden;
 }
 
@@ -1046,8 +1049,8 @@ footer p {
         margin-top: calc(50vh - 4*10rem/2);
     }
 
-    .home .name {
-        font-size: 4.5vh;
+    .home .name-reveal {
+        font-size: 7vh;
         line-height: 8vh;
     }
 

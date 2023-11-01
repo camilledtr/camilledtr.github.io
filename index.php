@@ -6,37 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camille Durthaller-Renard - My developer portfolio</title>
-    <meta name="description" content="I'm Camille Durthaller-Renard, a full stack developer transforming ideas into creative
-    and user-focused digital products. See my portfolio. Contact me.
-    web development projects,
-    software engineer salary,
-    software engineer qualifications,
-    software engineer certifications,
-    software engineer experience,
-    freelance software engineer,
-    freelance developer,
-    developer portfolio,
-    developer portfolio website,
-    developer resume,
-    developer cv,
-    developer cover letter,
-    developer interview,
-    programming,
-    portfolio website,
-    web development,
-    frontend developer,
-    full stack developer,
-    software engineer,
-    software developer,
-    software engineer portfolio,
-    software engineer resume,
-    software engineer cv,
-    software engineer cover letter,
-    software engineer interview,
-    backend developer,
-    software engineering principles,
-    agile software development,
-    software engineer remote jobs">
+    <meta name="description" content="Camille Durthaller-Renard, full stack developer, specialized in turning concepts into creative, user-focused digital products.
+    Explore my portfolio for web development projects, software engineering expertise, and more.
+    Contact me for collaboration and insights on software engineer qualifications, courses, and job opportunities.">
     <link rel="icon" href="public/assets/crop-logo.svg" type="image/svg+xml">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -93,18 +65,18 @@
                 <a href="https://www.github.com/camilledtr" target="_blank">
                     <i class="fa fa-github"></i></a>
             </div>
-            <div class="name">
+            <h1 class="name">
                 <div class="word-mask">
-                    <h1 class="name-reveal">Camille</h1>
+                    <div class="name-reveal">Camille</div>
                 </div>
                 <div class="word-mask">
-                    <h1 class="name-text">
+                    <div class="name-text">
                         <span class="name-reveal">Durthaller</span>
                         <span class="hyphen-reveal">-</span>
                         <span class="name-reveal third">Renard</span>
-                    </h1>
+                    </div>
                 </div>
-            </div>
+            </h1>
             <div class="home-text-reveal">
                 <h2>Hi!</h2>
                 <p>My name is Camille Durthaller-Renard.</p>
@@ -117,7 +89,7 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="background-text-reveal">Hello, there.</h1>
+            <div class="background-text-reveal">Hello, there.</div>
         </section>
 
         <section id="projects" class="projects">

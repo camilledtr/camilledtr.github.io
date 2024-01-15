@@ -9,7 +9,7 @@
     <meta name="description" content="Camille Durthaller-Renard, full stack developer, specialized in turning concepts into creative, user-focused digital products.
     Explore my portfolio for web development projects, software engineering expertise, and more.
     Contact me for collaboration and insights on software engineer qualifications, courses, and job opportunities.">
-    <link rel="icon" href="public/assets/crop-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="public/assets/crop-logo.ico" type="image/svg+xml">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Stardom font -->

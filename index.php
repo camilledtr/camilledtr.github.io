@@ -30,13 +30,13 @@
             <li><a href="#projects" class="hover-underline-animation">Projects</a></li>
             <li><a href="#about" class="hover-underline-animation">About</a></li>
             <li><a href="#contact" class="hover-underline-animation">Contact</a></li>
-            <li>
+            <!-- <li>
                 <div class="my-cv primary-btn">
                     <a class="my-cv" href="public/assets/01_DURTHALLER-RENARD_resume.pdf" download>
                     <i class="fa fa-download" aria-hidden="true"></i>
                     My CV</a>
                 </div>
-            </li>
+            </li> -->
             <div class="menu-btn">
                 <p class="menu-btn__bar-1"></p>
                 <p class="menu-btn__bar-2"></p>

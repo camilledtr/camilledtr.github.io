@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="project reveal">
-                    <img src="public/assets/projects/fractallium.png" alt="Fractallium project" loading="lazy">
+                    <img src="public/assets/projects/fractallium.webp" alt="Fractallium project" loading="lazy">
                     <div class="project-card">
                         <a class="redirect-icon" href="https://fractallium.com/" target="_blank">
                             <i class="fa fa-external-link" aria-hidden="true"></i>

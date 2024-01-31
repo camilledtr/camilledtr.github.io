@@ -1,24 +1,18 @@
 @font-face {
     font-family: 'Crimson Text';
-    src: url('../public/assets/fonts/CrimsonText-Regular.ttf') format('truetype');
+    src: url('../public/assets/fonts/CrimsonText-Regular.woff2') format('truetype');
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Crimson Text';
-    src: url('../public/assets/fonts/CrimsonText-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-}
-
-@font-face {
     font-family: 'Lobster two';
-    src: url('../public/assets/fonts/LobsterTwo-Bold.ttf') format('truetype');
+    src: url('../public/assets/fonts/LobsterTwo-Bold.woff2') format('truetype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype');
+    src: url('../public/assets/fonts/Poppins-Regular.woff2') format('truetype');
     font-weight: 400;
 }
 
@@ -411,6 +405,7 @@ div.my-cv.primary-btn a {
 .nav-menu-list a {
     opacity: 0;
     font-size: 7rem;
+    font-weight: 300;
     line-height: 12rem;
     color: white;
     text-transform: uppercase;
@@ -463,7 +458,7 @@ div.my-cv.primary-btn a {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 0.6rem;
+    height: 0.3rem;
     bottom: 6rem;
     right: 0.7rem;
     background-color: white;
@@ -1040,11 +1035,6 @@ footer p {
         visibility: hidden;
     }
 
-    .nav-menu-list a {
-        font-size: 10vw;
-        line-height: 10rem;
-    }
-
     .nav-menu-list {
         margin-top: calc(50vh - 4*10rem/2);
     }
@@ -1119,6 +1109,16 @@ footer p {
 
     #nav-logo {
         height: 5rem;
+    }
+
+    .nav-menu-list a {
+        font-size: 10vw;
+        line-height: 10rem;
+        font-family: "Crimson Text", serif;
+    }
+
+    .hover-line-through-animation::after {
+        display: none;
     }
 
     .home .name {
